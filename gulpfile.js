@@ -9,7 +9,7 @@ var uglify = require('gulp-uglify');
 var cssmin = require('gulp-cssmin');
 
 gulp.task('sass', function(){
-    return gulp.src('app/scss/**/*.scss') // так было!return gulp.src('app/scss/style.scss')
+    return gulp.src('app/scss/**/*.scss') // !return gulp.src('app/scss/style.scss')
             .pipe(sass({outputStyle: 'compressed'}))
             .pipe(rename({suffix : '.min'}))
             .pipe(autoprefixer({
