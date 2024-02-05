@@ -5,7 +5,7 @@ rename = require('gulp-rename');
 const browserSync = require('browser-sync');
 
 gulp.task('sass', function(){
-    return gulp.src('app/scss/style.scss')
+    return gulp.src('app/scss/**/*.scss')
             .pipe(sass({outputStyle: 'compressed'}))
             .pipe(rename({suffix : '.min'}))
             .pipe(gulp.dest('app/css'))
