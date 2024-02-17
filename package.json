@@ -16,6 +16,7 @@
     "gulp-cssmin": "^0.2.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
+    "mixitup": "^3.3.1",
     "sass": "^1.69.4"
   },
   "dependencies": {
