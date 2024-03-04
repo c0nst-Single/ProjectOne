@@ -1,6 +1,10 @@
 html{
     box-sizing: border-box;
 }
+html,
+body {
+    height: 100%;
+  }
 *,
 *::before,
 *::after{
@@ -19,8 +23,8 @@ li{
     list-style: none;
 }
 .container{
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; // размер контента header
+    margin: 0 auto; // сентрируем
     padding: 0 15px;
 }
 body{
@@ -29,7 +33,21 @@ body{
     font-size: 15px;
     font-weight: 24px;
     color: $color-text;
-}.container-fluid{ //coneiner cotoriy na vsu sherenu ikrana
+}
+
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .content {
+    flex: 1 0 auto;
+  }
+  .footer {
+    flex: 0 0 auto;
+  }
+.container-fluid{ //coneiner cotoriy na vsu sherenu ikrana
     max-width: 100%;
     margin: 0 auto;
     padding: 0 30px;
@@ -39,6 +57,9 @@ body{
     .container-fluid{ //coneiner cotoriy na vsu sherenu ikrana
         padding: 0 15px;
     }
+}
+.page__content{
+    background-color: $grey;
 }
 .title{
     text-align: center;
@@ -51,4 +72,33 @@ body{
 .rate-star{
     display: inline-block;
     margin-right: 13px;
+}
+.breadcrumbs{
+    &__inner{
+        padding: 45px 0 40px;
+    }
+    &__list{
+        li{
+            display: inline-block;
+            position: relative;
+            &+li{
+                padding-left: 24px;
+                &::before{
+                    content: '-'; // создаем '-' между слов
+                    position: absolute;
+                    left: 8px;
+                    color: $green;
+                }
+            }
+            &:last-child{ // оброщение к последней ( li )
+                a,
+                span{ // span для бекэнда
+                    color: $bg;
+                }
+            }
+        }
+        a{
+            color: #b0bec5;
+        }
+    }
 }

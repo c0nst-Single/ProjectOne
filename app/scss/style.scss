@@ -58,6 +58,15 @@
     background-size: cover; //rastjagivaet izobrojenie
     background-position: center;
     min-height: 533px;
+    &.page-search{
+        min-height: 230px;
+        .search__inner{
+            padding: 55px 0 70px;
+            &-text{
+                margin-bottom: 20px;
+            }
+        }
+    }
 }
 .search__inner{
     padding: 155px 0 100px;
@@ -156,7 +165,7 @@
     &-content{
         display: flex;
         justify-content: space-between;
-        padding: 10px 30px;
+        padding: 26px 30px 10px 30px;
         border: solid 1px #e7ecf2;
         align-items: center;
         min-width: 90px;
@@ -170,6 +179,7 @@
             @include f500;
             font-size: 18px;
             display: block;
+            padding-bottom: 13px;
         }
         &-category{
             font-size: 13px;
@@ -180,6 +190,7 @@
             font-size: 20px;
             color: $bg;
             @include f500;
+            margin-top: -20px;
         }
         &-info{
             display: flex;
@@ -193,7 +204,7 @@
             align-items: center;
             max-width: 245px;
             .avatar{
-                width: 30px;
+                min-width: 30px;
                 height: 30px;
                 border-radius: 50%;
                 background-position: center;
@@ -573,3 +584,358 @@
     }
 }
 //end footer
+
+//start product-page
+
+.product-page__inner{
+    display: flex;
+    padding-bottom: 110px;
+}
+.product-page__aside{
+    margin-right: 30px;
+}
+.aside__item{
+    background-color: #fff;
+    border: 1px solid #dedede;
+    padding: 0 32px 32px;
+    margin-bottom: 30px;
+    width: 270px;
+}
+.aside__title{
+    border-bottom: 1px solid #dde3e8 ;
+    font-size: 20px;
+    color: $bg;
+    padding: 22px 0 19px;
+    @include f700;
+}
+.categori__list{
+    padding-top: 10px;
+    li{
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding-left: 20px;
+        &::before{
+            content: "";
+            color: #8bc34a;
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+            font-family: "icomoon";
+        
+        }
+    }
+    a{
+        color: $bg;
+    }
+    span{
+        color: #90a4ae;
+        margin-left: 10px;
+    }
+}
+.irs-min,
+.irs-max{
+    display: none;
+}
+.irs--flat .irs-bar{
+    background-color: #37474f;
+    height: 5px;
+}
+.irs--flat .irs-handle>i:first-child {
+    width: 16px;
+    height: 16px;
+    top: -3px;
+    border: 4px solid $green;
+    background-color: #FFF;
+    border-radius: 50%;
+}
+.irs--flat .irs-handle:hover>i:first-child{
+    background-color: #fff;
+}
+.price-range{
+    form{
+        padding-top: 20px;
+    }
+    button{
+        margin-top: 55px;
+        padding: 16px 10px;
+        background-color: $green;
+        text-align: center;
+        color: #fff;
+        @include f500;
+        width: 100%;
+        display: block;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        &::before{
+            content: '\e986';
+            color: #fff;
+            position: absolute;
+            left: 58px;
+            top: 15px;
+            font-size: 15px;
+            font-family: "icomoon";
+        }
+    }
+}
+span .irs-from,
+span .irs-to{
+    top: 45px;
+    
+}
+.irs--flat .irs-to:before,
+.irs--flat .irs-from:before{
+    display: none;
+}
+.irs--flat .irs-from, .irs--flat .irs-single, .irs--flat .irs-to {
+    color: #78909c;
+    font-size: 15px;
+    line-height: 1.333;
+    text-shadow: none;
+    padding: 0;
+    background-color: transparent; //прозрачный
+    border-radius: 0px;
+}
+.irs--flat .irs-line{
+    height: 4px;
+}
+.product-page__aside{
+    .product__item{
+        box-shadow: none;
+        
+        border-bottom: 1px solid #dde3e8;
+    }
+    .product__item-img{
+        min-height: 120px;
+
+    }
+    .product__item-content{
+        padding: 0;
+        min-height: 75px;
+        border-bottom: none;
+    }
+    .product__item-info{
+        padding: 0;
+        min-width: 0;
+    }
+    .product__item-title{
+        font-size: 16px;
+
+    }
+    .product__item-price {
+        font-size: 16px;
+    }
+    .product__item-starnum{
+        display: none;
+    }
+    .rate-star{
+        margin-right: 0;
+    }
+    .product__item-author .avatar{
+        margin-right: 9px;
+    }
+    .jq-ry-container{
+        padding: 0;
+    }
+}
+.aside__title{
+    border-bottom: 1px solid #dde3e8;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.aside__product-item{
+    .product__item:last-child{ //оброщаемся к последнему элементу
+        border: none;
+        padding-bottom: 0;
+    }
+    .product__item:first-child{
+        margin-top: 25px;
+    }
+}
+.top-sellers__link{
+    padding: 16px 10px;
+    display: block;
+    background-color: $green;
+    color: #fff;
+    @include f500;
+    text-align: center;
+}
+.product-page__filter{
+    background-color: #fff;
+    border: 1px solid #dedede;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button{
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        font-size: 16px;
+        color: #90a4ae;
+        outline: none; //удалит стандартную браузерную обводку, появляющуюся при фокусе на элемент
+        &.active{
+            color: $green;
+        }
+    }
+}
+.product-page__content{
+    width: 100%;
+}
+.product-page__filter-sort{
+    color: #707070;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+button .icon-sort-amount-desc{
+    font-size: 18px;
+    color: #455a64;
+}
+button .icon-unsorted{
+    font-size: 14px;
+    color: #707070;
+}
+.product-page__content{
+    .product__item{
+        max-width: 270px;
+        background-color: #fff;
+        transition: all .5s;
+    }
+    .product__item-img{
+       min-height: 180px; 
+    }
+    .product__item-img{
+        padding: 10px 20px;
+
+    }
+    .product__item-title{
+        font-style: 16px;
+    }
+    .product__item-info{
+        min-height: 65px;
+        padding: 10px 20px;
+    }
+    .rate-star{
+        margin-right: 5px;
+    }
+    .jq-ry-container{
+        padding: 0;
+    }
+}
+.product-page__items{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+.pagination__list{
+    li{
+        display: inline-block;
+        &+li{
+            margin-left: 6px;
+        }
+    }
+    a,
+    span{ // span для бекэнда
+        box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+        width: 43px;
+        height: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        font-size: 16px;
+        color: $bg;
+        @include f500;
+        &.active{
+            background-color: $red;
+            color: #fff;
+        }
+    }
+}
+.product__item-text{
+    display: none; 
+}
+.product__item-price{
+    span{
+        display: none;
+    }
+}
+.product__item-list{
+    display: none;
+    .icon-comment-o,
+    .icon-heart-o{
+        display: inline-block;
+        font-size: 12px;
+        color: #b0bec5;
+        padding-left: 50px;
+        border-left: 1px solid #d1d4d8;
+        position: relative;
+        span{
+            @include f500;
+            color: $bg;
+        };
+        &::before{
+            
+            font-size: 16px;
+            color: $green;
+            position: absolute;
+            left: 20px;
+            top: 0;
+        }
+    }
+    .icon-comment-o{
+        padding-right: 30px;
+        &::before{
+            top: -2px;
+        }
+    }
+}
+.product__item{ 
+    &.list{ // доп класс
+        max-width: 100%;
+        .product__item-img{
+            width: 240px;
+            float: left; //оптикать слева 
+        }
+        .product__item-text{
+            display: block; // добовляем объекты
+            font-size: 14px;
+            color: #70838d;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        .product__item-price{
+            font-size: 30px;
+            
+            span{
+                display: block; // добовляем объекты
+                font-size: 13px;
+                color: #aeb4bb;
+                margin-top: 30px;
+            }
+        }
+        .product__item-content{
+            padding: 23px 30px 10px 30px
+        }
+        .product__item-name{
+            max-width: 480px;
+        }
+        .product__item-title{
+            padding-bottom: 8px;
+        }
+        .product__item-list{
+            display: block;
+        }
+        .product__item-star{
+            margin-left: auto;
+            margin-right: 30px;
+        }
+    }
+}
+//end product-page
