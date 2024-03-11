@@ -34,6 +34,15 @@ $(function(){
     $('.icon-th-list').removeClass('active');
   })
 
+
+  $('.menu__btn').on('click', function(){ // (найди элемент) (действие к элементу, function())
+    $('.menu__list').slideToggle();
+  })
+
+  $('.header__btn-menu').on('click', function(){ // (найди элемент) (действие к элементу, function())
+    $('.header__box').toggleClass('active');
+  })
+  
     var mixer = mixitup('.products__inner-box');
 
 
