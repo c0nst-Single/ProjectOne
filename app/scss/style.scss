@@ -144,7 +144,7 @@
     }
     &__name{
         font-size: 14px;
-        @include f500;
+        @include f400;
         color: #222222;
     }
     &__money{
@@ -245,7 +245,7 @@
     margin-right: 15px;
 }
 .circle__info-name{
-    @include f500; 
+    @include f400; 
     color: $bg  
 }
 .circle__info-thema{
@@ -253,7 +253,7 @@
     color: $green
 }
 .circle__info-price{
-    @include f500;
+    @include f400;
     color: #000;
     font-size: 16px;
 }
@@ -348,7 +348,7 @@
     &-text{
         margin-bottom: 50px;
         font-size: 20px;
-        @include f500;
+        @include f400;
         line-height: 30px;
     }
     &-form{
@@ -363,7 +363,7 @@
             height: 56px;
             border: none;
             font-size: 14px;
-            @include f500;
+            @include f400;
             // outline: none; //ubrat focus
             // &:focus{
             //     border: 1px solid $green; //ismenit focus
@@ -372,7 +372,7 @@
             padding-right: 60px;
             &::placeholder{
                 color: #90a4ae;
-                @include f500;
+                @include f400;
             }
         }
         button{
@@ -436,14 +436,14 @@
         border: solid 1px #e7ecf2;
         align-items: center;
         min-width: 90px;
-        @include f500;
+        @include f400;
         }
         &-name{
             max-width: 310px;
         }
         &-title{
             color: $bg; 
-            @include f500;
+            @include f400;
             font-size: 18px;
             display: block;
             padding-bottom: 13px;
@@ -456,7 +456,7 @@
         &-price{
             font-size: 20px;
             color: $bg;
-            @include f500;
+            @include f400;
             margin-top: -20px;
         }
         &-info{
@@ -482,7 +482,7 @@
             }
             span{
                 font-size: 14px;
-                @include f500;
+                @include f400;
             }
             
         }
@@ -605,7 +605,7 @@
         margin-bottom: 25px;
         color: #fff;
         font-size: 24px;
-        @include f500
+        @include f400
     }
     &-text{
         font-size: 15px;
@@ -748,7 +748,7 @@
 }
 .footer__info{
     margin-top: 18px;
-    @include f500;
+    @include f400;
     color: #fff;
     padding-left: 30px;
     position: relative;
@@ -865,7 +865,7 @@
     background-color: #fff;
     border: 1px solid #dedede;
     padding: 0 32px 32px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     width: 270px;
 }
 .aside__title{
@@ -930,7 +930,7 @@
         background-color: $green;
         text-align: center;
         color: #fff;
-        @include f500;
+        @include f400;
         width: 100%;
         display: block;
         border: none;
@@ -1026,7 +1026,7 @@ span .irs-to{
     display: block;
     background-color: $green;
     color: #fff;
-    @include f500;
+    @include f400;
     text-align: center;
 }
 .product-page__filter{
@@ -1118,7 +1118,7 @@ button .icon-unsorted{
         background-color: #fff;
         font-size: 16px;
         color: $bg;
-        @include f500;
+        @include f400;
         &.active{
             background-color: $red;
             color: #fff;
@@ -1144,7 +1144,7 @@ button .icon-unsorted{
         border-left: 1px solid #d1d4d8;
         position: relative;
         span{
-            @include f500;
+            @include f400;
             color: $bg;
         };
         &::before{
@@ -1207,5 +1207,324 @@ button .icon-unsorted{
 }
 //end product-page
 
+//start product-one
 
+.product-one{
+    padding-bottom: 100px;
+}
+.product-one__inner{
+    display: flex;
+}
+
+.product-one__content{
+    margin-right: 31px;
+    max-width: 870px;
+}
+.product-one__images-inner{
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+}
+.product-one__images{
+    max-width: 829px;
+    width: 100%;
+    height: 422px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.product-one__title{
+    font-size: 30px;
+    color: $bg;
+    line-height: 40px;
+    @include f400;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.product-one__text{
+    font-size: 16px;
+    color: #707070;
+    margin-bottom: 35px;
+    margin-top: 20px;
+}
+.product-one__box{
+    margin-bottom: 55px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.product-one__link{
+    a{
+        padding: 14px 8px;
+        width: 150px;
+        color: $grey;
+        font-size: 16px;
+        & + a{
+            margin-left: 20px;
+        }
+    }
+    
+}
+
+.link-live{
+    background-color: $red;
+}
+.link-screenshots{
+    background-color: #455a64;
+}
+.link-documentation{
+    background-color: $green
+}
+.product-one__social{
+    a{
+        width: 54px;
+        height: 50px;
+        position: relative;
+        & + a{
+            margin-right: 3px;
+
+        }
+        &::before{
+            font-size: 18px;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); // для центровки
+        }
+    }
+}
+.icon-facebook{
+    background-color: #6370b6;
+}
+.icon-twitter{
+    background-color: #64b5f6;
+}
+.icon-linkedin{
+background-color: #4f71ce;
+}
+.icon-pinterest-p{
+background-color: #d32f2f;
+}
+.product-one__more-title{
+    font-size: 18px;
+    @include f400;
+    color: $bg;
+    padding: 18px 25px;
+    background-color: #fff;
+    border: solid 1px #dcdcdc;
+    margin-bottom: 28px;
+}
+
+
+
+
+.product-one__more-icons{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.productmini{
+    margin-bottom: 27px;
+    display: flex;
+    height: 90px;
+    max-width: 270px;
+    width: 100%;
+    background-color: #fff;
+    align-items: center;
+    box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+}
+.productmini__images{
+    width: 100px;
+    margin-right: 20px; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90px;
+}
+.productmini__name{
+    @include f400;
+    font-size: 14px;
+    color: $bg;
+}
+.productmini__thema{
+    color: $green;
+    font-size: 12px;
+    line-height: 21px
+}
+.productmini__price{
+    line-height: 21px;
+    @include f700;
+    font-size: 18px;
+    color: $bg;
+}
+.tabs{
+    display: flex;
+    text-align: center;
+    border: 1px solid #d7d7d7;
+    .tab{
+        width: 100%;
+        background-color: #fff;
+        font-size: 16px;
+        color: #70838d;
+        padding: 20px 0;
+        cursor: pointer;
+        & + .tab{
+            border-left: 1px solid #d7d7d7;
+        }
+    }
+}
+.tab_content{
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    border-top: none;
+    padding: 30px 30px 50px;
+}
+.product-one__more{
+    margin-top: 55px
+}
+.tab-item{
+    display: none;
+    &:first-child{
+        display: block
+    }
+}
+.tab-items__list{
+    line-height: 36px;
+    font-size: 16px;
+    color: #707070;
+    column-count: 2; //делит строки на равныое количество в столбики
+    column-gap: 25px //расстояние между столбиками
+}
+.price__box{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0
+}
+.price__product{
+    font-size: 22px;
+    @include f400;
+    color: $red;
+}
+.product__price{
+    button{
+        margin-bottom: 7px;
+        box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+        border: none;
+        background-color: $color-text;
+        color: #fff;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif !important;
+        font-weight: 700;
+        text-align: center;
+        display: block;
+        padding: 17px 5px 15px;
+        width: 100%;
+        cursor: pointer;
+        &::before{
+            font-weight: 400;
+            font-family: 'icomoon';
+            padding-right: 8px;
+        }
+    }
+    .icon-shopping-cart{
+        background-color: $green;
+      }
+    .icon-heart-o{
+        background-color: #42a5f5;
+    }
+}
+.product-author__box{
+    padding: 25px 0;
+    display: flex;
+}
+.author__avatar{
+    margin-right: 14px;
+}
+.author__name{
+ font-size: 18px;
+ color: $bg;
+ margin-bottom: 14px;
+}
+.author__info-link{
+    font-size: 13px;
+    color: #707070;  
+    padding: 6px 9px 5px;
+    border: solid 1px #d3d3d3;
+}
+.author__awards-list{
+    li{
+        display: inline-block;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        position: relative;
+        &::before{
+            position: absolute;
+            top: 6px;
+            left: 0;
+            right: 0;
+        }
+        & +li{
+            margin-left: 4px;
+        }
+    }
+     .icon-meh-o{
+        background-image: url(../images/awards/awars-orang.png);
+        width: 34px;  
+        height: 37px;       
+     }
+     .icon-pagelines{
+        background-image: url(../images/awards/awars-read.png); 
+        width: 34px;  
+        height: 37px;
+     }
+     .icon-flash{
+        background-image: url(../images/awards/awars-cyn.png);     
+        width: 34px;  
+        height: 37px;    
+     }
+     .icon-foursquare{
+        background-image: url(../images/awards/awars-green.png); 
+        width: 34px;  
+        height: 37px;
+     }
+     .icon-yen{
+        background-image: url(../images/awards/awars-grey.png); 
+        width: 34px;  
+        height: 37px;
+     }
+}
+.aside__item-sails{
+    padding-top: 23px;
+    font-size: 16px;
+    @include f300;
+    color: #707070;
+    span{
+        font-size: 20px;
+        @include f700;
+        color: #263238;
+        padding-right: 13px;
+        &::before{
+            content: "\f07a";
+            color: #a6b5bb;
+            padding-right: 20px;
+            font-family: 'icomoon';
+        }
+    }
+}
+.information__line{
+    font-size: 14px;
+    color: #70838d;
+    margin-top: 20px;
+    span{
+        color: $bg;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+    }
+}
+//end product-one
 @import 'media';
