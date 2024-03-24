@@ -148,7 +148,7 @@
                                 </ul>
                             </div>
                             </div>
-                            <a class="header__btn header__btn-login" href="#">Login</a> 
+                            <a class="header__btn header__btn-login" data-fancybox data-src="#modal" href="javascript:;">Login</a> 
                             <a class="header__btn header__btn-logout header__btn-login--off" href="#">Logout</a>
                             <a class="header__btn header__btn-register" href="#">Register</a>
                         </div>
@@ -1039,6 +1039,25 @@
         </div>
     </div>
 </footer>
+</div>
+
+<div id="modal">
+    <div class="login__wrapper">
+    <div class="login__title">
+        Login
+    </div>
+    <form action="">
+        <label class="login__label-name">                      <!--Можно связать с input, after/befor работають-->
+            <input type="text" placeholder="Name" required>      <!--для ввода пользователем текста, after/befor не работають-->
+        </label>  
+        <label class="login__label-pass">                      
+            <input type="text" placeholder="Password" required>      
+        </label>
+        <button type="submit">Submit</button>
+        <a class="creat-acc" href="#">Creat An Account?</a>
+        <a class="lost-pass" href="#">Lost Password?</a>
+    </form>
+    </div>
 </div>
 
 
